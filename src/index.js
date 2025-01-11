@@ -75,9 +75,10 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `
-        <div class="weather-forecast-day">
+  <div class="weather-forecast-day">
   <div class="weather-forecast-date">${formatDay(day.time)}</div>
-  <img class="weather-forecast-icon"src="${day.condition.icon_url}"/>
+
+  <img class="weather-forecast-icon" src="${day.condition.icon_url}"/>
   <div class="weather-forecast-temperatures">
     <div class="weather-forecast-temperature">
       <strong>${Math.round(day.temperature.maximum)}°</strong>
@@ -98,4 +99,4 @@ function displayForecast(response) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Paris");
+searchCity("Liverpool");
